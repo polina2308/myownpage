@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="dark.css">                                       <!--2 файловых стиля-->
+   	<link rel="stylesheet" type="text/css" href="light.css" id="theme-link">
+       
+       <style>
+        img {
+        max-width: 100%;
+        height: auto;
+    }
+    </style>
+
+    <style>                                                                                     /*css для слайдшоу*/
+        * {box-sizing: border-box}
+        body {font-family: Verdana, sans-serif; margin:0}
+        .mySlides {display: none}
+        img {vertical-align: middle;}
+        
+        /* Slideshow container */
+        .slideshow-container {
+          max-width: 1000px;
+          position: relative;
+          margin: auto;
+        }
+        
+        /* Next & previous buttons */
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+        }
+        
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+        
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+          background-color: rgba(0,0,0,0.8);
+        }
+        
+        /* Caption text */
+        .text {
+          color: #f2f2f2;
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+        
+        /* The dots/bullets/indicators */
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        
+        .active, .dot:hover {
+          background-color: #717171;
+        }
+        
+        /* Fading animation */
+        .fade {
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        @keyframes fade {
+          from {opacity: .4} 
+          to {opacity: 1}
+        }
+        
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+          .prev, .next,.text {font-size: 11px}
+        }
+        </style>                                                                                      <!--Конец css-->
+
+        <title>ИДЗ ВЕРЕШКО</title>
+</head>
+<body>       
+
+    <div class="wrapper">                                                                              <!--Тема на html-->
+        <div class="theme-button" id="theme-button">Change theme</div>
+    </div>                                                                                          <!--Конец темы на html-->
+
+    <script>                                                                                            //тема на джс
+    var btn = document.getElementById("theme-button"); 
+        var link = document.getElementById("theme-link");
+        
+        btn.addEventListener("click", function () { ChangeTheme(); });
+        
+        function ChangeTheme()
+        {
+            let lightTheme = "light.css";
+            let darkTheme = "dark.css";
+        
+            var currTheme = link.getAttribute("href");
+            var theme = "";
+        
+            if(currTheme == lightTheme)
+            {
+                currTheme = darkTheme;
+                theme = "dark";
+            }
+            else
+            {    
+                currTheme = lightTheme;
+                theme = "light";
+            }
+        
+            link.setAttribute("href", currTheme);
+        
+            Save(theme);
+        }                                                                                   //тема на джс
+        </script>                             
+                        
+    <table width="100%">                                                                                            <!--байда по списку-->
+        <tr>
+            <th></th>
+            <th><h1><p align ="center">МОЯ ЛИЧНАЯ СТРАНИЦА</p></h1></th>
+            <th><p align="right"><a href= "mailto: polina.vereshko@gmail.com"><img src="mail.png" width="40" height="35"></a></p><p align="right"><a href= "https://github.com/polina2308"><img src="transparent-github-icon-hexagon-icon-logo-icon-5d699b14c14408.3993059015672020687916.jpg" width="40" height="35"></a></p></th>
+        </tr>
+    </table>             
+                      
+    
+    <table border="4" cellspacing="3">
+        <tr>
+            <th>
+                №
+            </th>
+            <th>
+                ПРЕДМЕТ
+            </th>
+            <th>
+                ПРЕПОДАВАТЕЛЬ
+            </th>
+            <th>
+                ОЦЕНКА
+            </th>
+        </tr>
+        <tr>
+            <th>
+                1.
+            </th>
+            <th>
+                Іноземна мова
+            </th>
+            <th>
+                Вракіна
+            </th>
+            <th>
+                85B
+            </th>
+        </tr>
+        <tr>
+            <th>
+                2.
+            </th>
+            <th>
+                Диференційні рівняння
+            </th>
+            <th>
+                Міхлін
+            </th>
+            <th>
+                69D
+            </th>
+        </tr>
+        <tr>
+            <th>
+                3.
+            </th>
+            <th>
+                Нарисна геометрія та комп'ютерна графіка 
+            </th>
+            <th>
+                Федченко
+            </th>
+            <th>
+                75C
+            </th>
+        </tr>
+        <tr>
+            <th>
+                4.
+            </th>
+            <th>
+                Об'єктно-орієнтоване програмування
+            </th>
+            <th>
+                Водка
+            </th>
+            <th>
+                81C
+            </th>
+        </tr>
+        <tr>
+            <th>
+                5.
+            </th>
+            <th>
+                Системи комп'ютерної математики
+            </th>
+            <th>
+                Трубаєв
+            </th>
+            <th>
+                60E
+            </th>
+        </tr>
+        <tr>
+            <th>
+                6.
+            </th>
+            <th>
+                Теоретична механіка
+            </th>
+            <th>
+                Лавінський
+            </th>
+            <th>
+                60E
+            </th>
+        </tr>
+        <tr>
+            <th>
+                7.
+            </th>
+            <th>
+                Правознавство
+            </th>
+            <th>
+                Кузьменко
+            </th>
+            <th>
+                91A
+            </th>
+        </tr>
+        <tr>
+            <th>
+                8.
+            </th>
+            <th>
+                Фізичне виховання
+            </th>
+            <th>
+                Ширяєва
+            </th>
+            <th>
+                90A
+            </th>
+        </tr>
+    </table>
+
+        <h2><p align="center"><u>5 ЛЮБИМЫХ ФИЛЬМОВ</u></p></h2>
+        
+        <table width="100%">
+            <tr>
+                <th><p><a href= https://kinogo.biz/29109-garri-potter-i-uznik-azkabana.html><img src="i (1).webp" width="142" height="192"></a></p></th>
+                <th><p><a href="https://kinogo.biz/24290-garri-potter-i-tajnaja-komnata.html"><img src="thumb-1920-98652.jpg" width="142" height="192"></a></p></th>
+                <th><p><a href="https://kinogo.la/222-garri-potter-i-filosofskiy-kamen-2001_11-01.html"><p><img src="filos.jpg" width="142" height="192"></a></p></th>
+                <th><p><a href="https://kinogo.biz/16721-garri-potter-i-orden-feniksa.html"><img src="1441-1000x830.jpg" width="142" height="192"></a></p></th>
+                <th><p><a href="https://kinogo.biz/19572-garri-potter-i-kubok-ognja.html"><img src="latest.jfif" width="142" height="192"></a></p></th>
+            </tr>
+        </table> 
+
+        <h2><p align="center"><u>3 СЛОВА, КОТОРЫМИ МОЖНО МЕНЯ ОПИСАТЬ</u></p></h2>
+            
+        <h3><p align="left"><font color="#FF1493">Polina</font></p><p align="center" ><font color="#FF1493">Vereshko</font></p><p align="right"><font color="#FF1493">Igorevna</font></p></h3>
+        
+        <h2><p align="center"><u>3 ВИДА НАСТРОЕНИЯ</u></p></h2>
+
+        <table width="100%">
+            <tr>
+                <th align=left>Счастливое</th>
+                <th align=center>Грустное</th>
+                <th align=right>В текущий момент</th>
+            </tr>
+            <tr>
+                <th align=left><img width="200" height="200" src="happy.jpg"></th>
+                <th align=center><img width="200" height="200" src="f8b0a7a432e2d19ae6731d22fc7db478.jpg"></th>
+                <th align=right><img width="200" height="200" src="original.jpg"></th>
+            </tr>
+        </table>
+
+        <h2><p align="center"><u>ЦИТАТА</u></p></h2>
+        
+        <p>Альбус Дамблдор:</p>
+        <p><font face="century gothic"><q>Счастье  можно обрести даже в самые темные времена, если не забывать обращаться к свету.</q></font></p>
+
+            <h2><p align="center"><u>МЕСТО ЖИТЕЛЬСТВА</u></p></h2>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.4990378411308!2d36.35000189289099!3d50.020744191939386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x412709da6ef82a67%3A0x19d46dc82bb30b3!2zNjA3LdC5INC80LjQutGA0L7RgNCw0LnQvtC9LCDQpdCw0YDRjNC60L7Qsiwg0KXQsNGA0YzQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1sru!2sua!4v1619477376964!5m2!1sru!2sua" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            
+            <h2><p align="center"><u>СЛАЙД-ШОУ НА ТЕМУ ГАРРИ ПОТТЕРА</u></p></h2>    
+
+            <div class="slideshow-container">                                                           <!--Слайдшоу на html-->
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 8</div>
+                  <img src="slide1.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 8</div>
+                  <img src="slide2.webp" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 8</div>
+                  <img src="slide3.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">4 / 8</div>
+                  <img src="slide4.jpeg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">5 / 8</div>
+                  <img src="slide5.webp" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">6 / 8</div>
+                  <img src="slide6.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">7 / 8</div>
+                  <img src="slide7.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                  <div class="numbertext">8 / 8</div>
+                  <img src="slide8.webp" style="width:100%">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+            </div>
+            <br>
+                
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>                                                                                        <!--Конец слайдшоу на html-->
+                
+            <script>                                                                               
+                var slideIndex = 1;                                           //тема на джс
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }                                                                                //конец темы на джс
+            </script>       
+            
+            <h2><p align="center"><u>3D-IMAGE</u></p></h2>
+            
+            <div class="sketchfab-embed-wrapper"> <!--3D-->
+                <iframe title="Musketeer Cat" frameborder="0" allowfullscreen mozallowfullscreen="true" width="50%" height="300" webkitallowfullscreen="true" allow="fullscreen; autoplay; vr" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/0b72b340ebc74712be24bfcd36fcf9d6/embed"> 
+                </iframe> 
+                </div> 
+
+    </body>
+    </html>
+    
