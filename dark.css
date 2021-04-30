@@ -1,0 +1,30 @@
+body
+{
+    background:url(dark.jpg);
+    color: #f4f4f4;
+}
+
+.header
+{
+    background: #373737;
+    color: #f4f4f4;
+}
+
+.nav__item
+{
+    color: #f4f4f4;
+    background: #373737;
+}
+
+.nav__item:hover, .nav__item_active
+{
+    background: #444;
+}
+
+.theme-button
+{
+    color: black;
+    background: white;
+    border-radius: 10px;
+}
+
