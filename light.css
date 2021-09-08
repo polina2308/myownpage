@@ -1,0 +1,29 @@
+body
+{
+    background:url(hogwarts1.jpg);
+    color: #111;
+}
+
+.header
+{
+    background: #4a76a8;
+    color: #f4f4f4;
+}
+
+.nav__item
+{
+    color: #f4f4f4;
+    background: #4a76a8;
+}
+
+.nav__item:hover, .nav__item_active
+{
+    background: #4f7faf;
+}
+
+.theme-button
+{
+    color: #f4f4f4;
+    background:black;
+    border-radius: 10px;
+}
